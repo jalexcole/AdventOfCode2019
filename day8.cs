@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 /*
@@ -45,6 +45,19 @@ namespace Day8CS
             var values =  line.ToCharArray();
             
             int[] numericValues = Array.ConvertAll(values, c => (int)Char.GetNumericValue(c));
+
+        }
+        static void read25(int stuff){
+            /*
+            This function is to parse a single layer at a time.
+            */
+            int[] numericValues;
+            using (StreamReader sr = new StreamReader(fileName)){ 
+                numericValues = sr.ReadLine().Take(25).Select(x => Convert.ToInt32(char.GetNumericValue(x))).ToArray();
+            }
+            
         }
     }
+
+    
 }
