@@ -74,8 +74,8 @@ int main(){
 
 void day1(){
     int stars = 50;
-    float fuel_needed = 0;
-    float module;
+    double fuel_needed = 0;
+    double module;
     string line;
     ifstream myfile;    // use ifstream for input of file
     myfile.open("day1input.txt");
@@ -95,7 +95,7 @@ void day1(){
     cout << "Fuel needed is: " << fuel_needed << endl;
 
 }
-int requiredFuel(float mass){
+int requiredFuel(double mass){
     int fuel = floor(mass / 3.0) - 2;
     return fuel;
 }
